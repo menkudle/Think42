@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="author" content="Kingpin">
+
+  <title>Thinkathon 19</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+    <style>
+    #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Thinkathon 19</a>
+    </div>
+  </nav>
+
+  <div id="map"></div>
+
+  
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script> 
+
+        function initMap() {
+          var myLatLng = {lat: 13.0827, lng: 80.2707};
+  
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 11,
+            center: myLatLng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          });
+  
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!'
+          });
+        }
+      </script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALwq8dchjUeUybDfWkxyo2c1zXZYRDd3Y&callback=initMap">
+      </script>
+</body>
+
+</html>
